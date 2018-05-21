@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'NoPaper')
+@section('title', 'NoPaper | Admin')
 
 @section('content_header')
     <h1>Painel de Controle</h1>
