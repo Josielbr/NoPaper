@@ -1,87 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Cardapio | {{ config('app.name', 'Laravel') }}</title>
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Logotipo -->
+        <topo logo="#" url="{{ url('/') }}">
+    
+             <!-- Autenticação do Usuário -->
+             @guest
+             <li><a href="{{ route('login') }}">Login</a></li>
+             <li><a href="{{ route('register') }}">Cadastre-se</a></li>
+         @else
+             <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                     {{ Auth::user()->name }} <span class="caret"></span>
+                 </a>
 
-        <title>Cardapio | NoPaper</title>
-_
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+                 <ul class="dropdown-menu">
+                     <li>
+                         <a href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                             Logout
+                         </a>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
+                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                             {{ csrf_field() }}
+                         </form>
+                     </li>
+                 </ul>
+             </li>
+         @endguest
+        
+        </topo>
 
-            .full-height {
-                height: 100vh;
-            }
+        @yield('content')
+    </div>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/admin') }}">Painel Admin</a>
-                    @else
-                        <a href="{{ route('login') }}">Fazer Login</a>
-                        <a href="{{ route('register') }}">Cadastrar-Se</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                  Cardápio Digital
-                </div>
-            </div>
-        </div>
-    </body>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
 </html>
