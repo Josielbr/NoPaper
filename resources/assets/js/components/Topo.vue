@@ -48,6 +48,6 @@
 }
 .navbar-default {
     background-color: #fff;
-    border-color: #000;
+    border-color: #999;
 }
 </style>

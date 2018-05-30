@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'red',
 
     /*
     |--------------------------------------------------------------------------
@@ -113,6 +113,18 @@ return [
             'text'        => 'Home',
             'url'         => 'admin',
             'icon'        => 'home',
+        ],
+        'Meu Perfil',
+        [
+            'text'        => 'Editar Perfil',
+            'url'         => 'admin',
+            'icon'        => 'anchor',
+        ],
+        'Cadastro de Produtos',
+        [
+            'text'        => 'Produtos',
+            'url'         => 'admin',
+            'icon'        => 'apple',
         ],
      
     ],

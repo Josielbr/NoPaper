@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Cardapio | {{ config('app.name', 'Laravel') }}</title>
+    <link href="style.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
-        <!-- Logotipo -->
+        <!-- Topo-->
         <topo logo="#" url="{{ url('/') }}">
     
              <!-- Autenticação do Usuário -->
@@ -40,10 +42,33 @@
          @endguest
         
         </topo>
-
+        <
+          <!-- Logotipo do Cliente-->
+        <logo-cliente></logo-cliente>
+        
         @yield('content')
+        <pagina tamanho="12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <caixa titulo="Pizzas" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Lanches" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Pastéis" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                    </div>
+                    <div class="col-md-4">
+                        <caixa titulo="Salgados" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Porções" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Petiscos" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                    </div>
+                    <div class="col-md-4">
+                        <caixa titulo="Cervejas" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Sucos" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Refrigerantes" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                    </div>
+                </div>
+        </pagina>
+          <!--Rodapé da pagina-->
+        <rodape></rodape>
     </div>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
