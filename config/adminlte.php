@@ -123,7 +123,7 @@ return [
         'Cadastro de Produtos',
         [
             'text'        => 'Produtos',
-            'url'         => 'admin',
+            'url'         => 'admin/produtos',
             'icon'        => 'apple',
         ],
      
