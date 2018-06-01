@@ -42,7 +42,7 @@
          @endguest
         
         </topo>
-        <
+        
           <!-- Logotipo do Cliente-->
         <logo-cliente></logo-cliente>
         
@@ -50,19 +50,19 @@
         <pagina tamanho="12">
                 <div class="row">
                     <div class="col-md-4">
-                        <caixa titulo="Pizzas" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
-                        <caixa titulo="Lanches" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
-                        <caixa titulo="Pastéis" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Pizzas" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Lanches" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Pastéis" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
                     </div>
                     <div class="col-md-4">
-                        <caixa titulo="Salgados" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
-                        <caixa titulo="Porções" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
-                        <caixa titulo="Petiscos" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Salgados" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Porções" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Petiscos" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
                     </div>
                     <div class="col-md-4">
-                        <caixa titulo="Cervejas" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
-                        <caixa titulo="Sucos" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
-                        <caixa titulo="Refrigerantes" url="#" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Cervejas" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Sucos" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Refrigerantes" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
                     </div>
                 </div>
         </pagina>
