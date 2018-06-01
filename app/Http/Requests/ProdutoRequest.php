@@ -16,10 +16,10 @@ class ProdutoRequest extends FormRequest
     public function rules()
     {
         return [
-            'nome' => 'required|min:3', 
-            'descricao' => 'required|max:255',
-            'valor' => 'required|numeric',
-            'quantidade' => 'required|numeric'
+            'produto_nome' => 'required|min:3', 
+            'produto_desc' => 'required|max:255',
+            'produto_valor' => 'required|numeric',
+            'produto_qtd' => 'required|numeric'
          ];
     }
 
@@ -29,3 +29,5 @@ class ProdutoRequest extends FormRequest
         ];
     }
 }
+
+

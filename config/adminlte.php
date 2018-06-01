@@ -120,10 +120,15 @@ return [
             'url'         => 'admin',
             'icon'        => 'anchor',
         ],
-        'Cadastro de Produtos',
+        'Produtos',
         [
-            'text'        => 'Produtos',
+            'text'        => 'Cadastro de Produto',
             'url'         => 'admin/produtos',
+            'icon'        => 'apple',
+        ],
+        [
+            'text'        => 'Produtos Cadastrados',
+            'url'         => 'admin/produtos/lista',
             'icon'        => 'apple',
         ],
      

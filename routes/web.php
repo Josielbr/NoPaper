@@ -11,6 +11,9 @@ $this->get('admin/produtos', 'admin\ProdutoController@novo');
 //$this->get('admin/produtos/adiciona', 'admin\ProdutoController@adiciona');
 
 $this->post('/admin/produtos/adiciona', 'admin\ProdutoController@adiciona');
+$this->get('/admin/produtos/lista', 'admin\ProdutoController@lista');
+$this->get('/admin/produtos/mostra/{id}', 'admin\ProdutoController@mostra');
+$this->get('/admin/produtos/remove/{id}', 'admin\ProdutoController@remove' );
 
 
 

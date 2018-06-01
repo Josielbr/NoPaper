@@ -12,15 +12,15 @@ use Auth;
 
 class ProdutoController extends Controller{
 
-    /*public function lista(){      
-       $produtos = Produto::all();
-        return view('produto.listagem')->with('produtos', $produtos);
+    public function lista(){      
+       $produtos = Produtos::all();
+        return view('produto/produto_listagem')->with('produtos', $produtos);
         }
 
     public function mostra($id){
-        $produto = Produto::find($id);
-        return view('produto.detalhes')->with('p', $produto);
-    }*/
+        $produto = Produtos::find($id);
+        return view('produto/produto_detalhe')->with('p', $produto);
+    }
 
     public function novo(){
         return view('produto/produto_form');//->with('categorias', Categoria::all());
@@ -30,14 +30,13 @@ class ProdutoController extends Controller{
         Produtos::create($request->all());
        return redirect('/admin')->withInput();
     }
-    /*
     
 
     public function remove($id){
-        $produto = Produto::find($id);
+        $produto = Produtos::find($id);
         $produto->delete();
-        return redirect()->action('ProdutoController@Lista');
-    }*/
+        return redirect()->action('admin\ProdutoController@lista');
+    }
   
 
 }

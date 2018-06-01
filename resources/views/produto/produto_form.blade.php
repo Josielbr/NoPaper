@@ -1,16 +1,14 @@
-<html>
-<head></head>
+@extends('\layouts.layout_cabecalho')
 
-<body>
-    
+@section('conteudo')
 
-<div class="alert alert-danger">
-    <ul>
-        @foreach($errors->all() as $error)
-            <li>{{$error}}</li>
-        @endforeach
-    </ul>
-</div>
+
+<ul>
+    @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+    @endforeach
+</ul>
+
 
 <h1>Cadastro de produtos</h1>
 <form action="produtos/adiciona" method="post">
@@ -18,23 +16,22 @@
 
     <div class="form-group">
         <Label>Nome</>
-        <br><input name="nome" type="text" class="form-control" value="{{ old('nome') }}">
-        <br><Label>Valor</Label>
-        <br><input name="valor" type="teLabelxt" class="form-control" value="{{ old('valor') }}">
-        <br><Label>Quantidade</Label>
-        <br><input name="quantidade" type="number" class="form-control" value="{{ old('quantidade') }}" >
-        <br><div  class="form-group">
+        <input name="produto_nome" type="text" class="form-control" >
+        <Label>Valor</Label>
+        <input name="produto_valor" type="teLabelxt" class="form-control">
+        <Label>Quantidade</Label>
+        <input name="produto_qtd" type="number" class="form-control"  >
+        <div  class="form-group">
             <Label>Categoria</Label>
-           <br> <select name="categoria_id" class="form-control">
+           <select name="categoria_id" class="form-control">
        
             </select>
         </div>
-        <br><Label>Descrição</Label>
-        <br><input name="descricao" type="text" class="form-control" value="{{ old('descricao') }}">
+        <Label>Descrição</Label>
+        <input name="produto_desc" type="text" class="form-control">
     </div>  
-    <br><br> <button class="btn btn-primary" type="submit">Salvar</button>  
+    <button class="btn btn-primary" type="submit">Salvar</button>  
+    
+    <button class="btn btn-danger" type="reset">Cancelar</button>  
 </form>
-
-</body>
-
-</html>
+@stop
