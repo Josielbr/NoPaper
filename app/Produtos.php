@@ -12,4 +12,8 @@ class Produtos extends Model
     protected $fillable =
          array('produto_nome', 'produto_desc','produto_valor', 'produto_qtd');
     
+
+   /* public function categoria(){
+        return $this->belongsTo('App\Categoria');
+    }*/
 }
