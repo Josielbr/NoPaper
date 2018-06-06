@@ -7,7 +7,7 @@
     <div class ='row'>
         <h3> Produtos do carrinho</h3>
      <hr/>
-        @forelse ($pedidos as $pedido) 
+        @forelse ($pedidos as $pedido_produto) 
             <h5 class="col l6 s12 m6 ">Pedido: {{$Pedido->id}}</h5>
             <h5 class="col l6 s12 m6 ">Criado em: {{$Pedido->created_at->format('d/m/y H:i ')}}</h5>
             <table>

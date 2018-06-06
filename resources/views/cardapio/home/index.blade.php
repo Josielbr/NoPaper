@@ -24,8 +24,6 @@
                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
                      {{ Auth::user()->name }} <span class="caret"></span>
                  </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                  <ul class="dropdown-menu">
                      <li>
@@ -104,7 +102,7 @@
             <div class="content">
                 <div class="title m-b-md">
                   Cardápio Digital
-=======
+
 
                  <ul class="dropdown-menu">
                      <li>
@@ -114,8 +112,8 @@
                              Logout
                          </a>
 
->>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
-=======
+
+
 
                  <ul class="dropdown-menu">
                      <li>
@@ -125,7 +123,7 @@
                              Logout
                          </a>
 
->>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
+
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                              {{ csrf_field() }}
                          </form>
@@ -157,13 +155,6 @@
                         <caixa titulo="Sucos" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
                         <caixa titulo="Refrigerantes" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
-=======
->>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
                 </div>
         </pagina>
           <!--Rodapé da pagina-->
