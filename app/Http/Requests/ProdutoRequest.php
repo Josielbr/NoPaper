@@ -20,6 +20,7 @@ class ProdutoRequest extends FormRequest
             'produto_desc' => 'required|max:255',
             'produto_valor' => 'required|numeric',
             'produto_qtd' => 'required|numeric'
+            
          ];
     }
 

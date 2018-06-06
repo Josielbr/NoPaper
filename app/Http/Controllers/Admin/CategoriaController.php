@@ -37,7 +37,7 @@ class CategoriaController extends Controller
     }    
     
     public function novo(){
-        return view('produto/categoria_form');//->with('categorias', Categoria::all());
+        return view('produto/categoria_form')->with('categorias', Categoria::all());
     }
 
     public function remove($id){

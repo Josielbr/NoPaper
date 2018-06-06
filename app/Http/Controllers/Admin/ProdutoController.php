@@ -9,8 +9,6 @@ use App\Produtos;
 use App\Http\Requests\ProdutoRequest;
 use Auth;
 
-//use App\Categoria;
-
 use App\Categoria;
 
 
@@ -28,13 +26,7 @@ class ProdutoController extends Controller{
     }
 
     public function novo(){
-
-        return view('produto/produto_form');//->with('categorias', Categoria::all());
-
         return view('produto/produto_form')->with('categorias', Categoria::all());
-
-        return view('produto/produto_form')->with('categorias', Categoria::all());
-
     }
 
     public function adiciona( ProdutoRequest $request){
