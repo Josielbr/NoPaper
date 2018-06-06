@@ -11,7 +11,11 @@ class CreateProdutosTable extends Migration
     {
         Schema::create('produtos', function (Blueprint $table) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->increments('produto_id');
+=======
+            $table->increments('id');
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
 =======
             $table->increments('id');
 >>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209

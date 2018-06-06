@@ -132,7 +132,10 @@ return [
             'icon'        => 'apple',
         ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
         [
             'text'        => 'Cadastro de Categorias',
             'url'         => 'admin/categorias',
@@ -143,6 +146,9 @@ return [
             'url'         => 'admin/categorias/lista',
             'icon'        => 'apple',
         ],
+<<<<<<< HEAD
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
+=======
 >>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
      
     ],

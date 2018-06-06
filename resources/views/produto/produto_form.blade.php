@@ -24,13 +24,19 @@
         <div  class="form-group">
             <Label>Categoria</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
            <select name="categoria_id" class="form-control">
        
 =======
+=======
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
             <select name="categoria_id" class="form-control">
                 @foreach( $categorias as $c)
                 <option value="{{$c->id}}">{{$c->categoria_nome}}</option>
                 @endforeach
+<<<<<<< HEAD
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
+=======
 >>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
             </select>
         </div>

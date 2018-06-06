@@ -23,6 +23,7 @@ $this->get('/admin/categorias/remove/{id}', 'admin\CategoriaController@remove' )
 
 
 
+
 //Responsável por exibir a home do Cardápio
 $this->get('/', 'Cardapio\CardapioController@index')->name('cardapio');
 $this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('cardapio-item');
@@ -30,6 +31,14 @@ $this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('car
 
 // Responsável por exibir o carrinho.
 Route::get('/carrinho', 'Carrinho\CarrinhoController@index')->name('carrinho.carrinho');
+
+
+
+
+
+//Responsável por exibir a home do Cardápio
+$this->get('/', 'Cardapio\CardapioController@index')->name('cardapio');
+$this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('cardapio-item');
 
 
 Auth::routes();

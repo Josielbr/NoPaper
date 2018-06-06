@@ -25,6 +25,7 @@
                      {{ Auth::user()->name }} <span class="caret"></span>
                  </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                  <ul class="dropdown-menu">
                      <li>
@@ -114,6 +115,17 @@
                          </a>
 
 >>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
+=======
+
+                 <ul class="dropdown-menu">
+                     <li>
+                         <a href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                      document.getElementById('logout-form').submit();">
+                             Logout
+                         </a>
+
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                              {{ csrf_field() }}
                          </form>
@@ -146,7 +158,10 @@
                         <caixa titulo="Refrigerantes" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
 =======
 >>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
                 </div>
