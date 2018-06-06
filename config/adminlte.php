@@ -126,6 +126,18 @@ return [
             'url'         => 'admin/produtos/lista',
             'icon'        => 'chevron-down',
         ],
+
+        [
+            'text'        => 'Cadastro de Categorias',
+            'url'         => 'admin/categorias',
+            'icon'        => 'apple',
+        ],
+        [
+            'text'        => 'Categorias Cadastradas',
+            'url'         => 'admin/categorias/lista',
+            'icon'        => 'apple',
+        ],
+
      
     ],
 

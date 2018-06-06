@@ -8,7 +8,15 @@ use Validator;
 use App\Produtos;
 use App\Http\Requests\ProdutoRequest;
 use Auth;
+<<<<<<< HEAD
+<<<<<<< HEAD
 //use App\Categoria;
+=======
+use App\Categoria;
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
+=======
+use App\Categoria;
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
 
 class ProdutoController extends Controller{
 
@@ -23,7 +31,15 @@ class ProdutoController extends Controller{
     }
 
     public function novo(){
+<<<<<<< HEAD
+<<<<<<< HEAD
         return view('produto/produto_form');//->with('categorias', Categoria::all());
+=======
+        return view('produto/produto_form')->with('categorias', Categoria::all());
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
+=======
+        return view('produto/produto_form')->with('categorias', Categoria::all());
+>>>>>>> 6ff245e6f13ca8ce269a4035532ac4c70817c209
     }
 
     public function adiciona( ProdutoRequest $request){
