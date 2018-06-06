@@ -28,11 +28,12 @@ return [
     | You can use basic HTML here if you want. The logo has also a mini
     | variant, used for the mini side bar. Make it 3 letters or so
     |
-    */
+    
 
-    'logo' => '<b>No</b>Paper',
+    'logo' => '<b>No</b>Paper',*/
+    'logo' => '<img src="images/logo.png" width="100px"> ',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<img src="images/icone.png" width="50px">',
 
     /*
     |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ return [
     |
     */
 
-    'skin' => 'red',
+    'skin' => 'black-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -114,22 +115,16 @@ return [
             'url'         => 'admin',
             'icon'        => 'home',
         ],
-        'Meu Perfil',
-        [
-            'text'        => 'Editar Perfil',
-            'url'         => 'admin',
-            'icon'        => 'anchor',
-        ],
-        'Produtos',
+        'PRODUTOS',
         [
             'text'        => 'Cadastro de Produto',
             'url'         => 'admin/produtos',
-            'icon'        => 'apple',
+            'icon'        => 'plus',
         ],
         [
             'text'        => 'Produtos Cadastrados',
             'url'         => 'admin/produtos/lista',
-            'icon'        => 'apple',
+            'icon'        => 'chevron-down',
         ],
      
     ],

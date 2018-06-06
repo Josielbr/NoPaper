@@ -1,8 +1,8 @@
-@extends('\layouts.layout_cabecalho')
+@extends('adminlte::page')
 
-@section('conteudo')
+@section('title', 'NoPaper | Admin')
 
-
+@section('content')
 <ul>
     @foreach($errors->all() as $error)
         <li>{{$error}}</li>

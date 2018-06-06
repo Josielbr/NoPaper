@@ -42,9 +42,12 @@
         
         </topo>
         @yield('content')
-        
+        <pagina tamanho="12">
+        <tabela-produtos></tabela-produtos>
+        </pagina>
         <rodape></rodape>
         <script src="{{ asset('js/app.js') }}"></script>
+       
      </body>
 </html>
     
