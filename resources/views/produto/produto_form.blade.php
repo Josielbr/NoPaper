@@ -23,8 +23,10 @@
         <input name="produto_qtd" type="number" class="form-control"  >
         <div  class="form-group">
             <Label>Categoria</Label>
-           <select name="categoria_id" class="form-control">
-       
+            <select name="categoria_id" class="form-control">
+                @foreach( $categorias as $c)
+                <option value="{{$c->id}}">{{$c->categoria_nome}}</option>
+                @endforeach
             </select>
         </div>
         <Label>Descrição</Label>
