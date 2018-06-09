@@ -23,6 +23,8 @@ window.Vue = require('vue');
  Vue.component('logo-cliente', require('./components/LogoCliente.vue'));
  Vue.component('rodape', require('./components/Rodape.vue'));
  Vue.component('tabela-produtos', require('./components/TabelaProdutos.vue'));
+ Vue.component('painel', require('./components/Painel.vue'));
+
 
 const app = new Vue({
     el: '#app'

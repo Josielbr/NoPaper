@@ -1,10 +1,25 @@
 @extends('adminlte::page')
 
-@section('title', 'NoPaper | Admin')
+@section('title', 'NoPaper | Produtos Cadastrados')
+
+@section('content_header')
+<h1>Produtos Cadastrados</h1> 
+@stop
 
 @section('content')
-<h1>Listagem de produtos cadastrados</h1> 
+
 <table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Valor</th>
+        <th>Descrição</th>
+        <th>Estoque</th>
+        <th>Detalhes</th>
+        <th>Excluir</th>
+        </tr> 
+    </thead>        
+    <tbody>
     @foreach ($produtos as $p)
      <tr class = "{{ $p->produto_qtd < 2 ? 'danger' : ''}}" >
         <td>{{$p->produto_nome}}</td>
@@ -22,6 +37,7 @@
             </a>
         </td>
     </tr>
+    </tbody>
     @endforeach
 </table>
 @if(old('nome'))

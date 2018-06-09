@@ -29,11 +29,11 @@ return [
     | variant, used for the mini side bar. Make it 3 letters or so
     |
     
-
-    'logo' => '<b>No</b>Paper',*/
     'logo' => '<img src="images/logo.png" width="100px"> ',
 
-    'logo_mini' => '<img src="images/icone.png" width="50px">',
+    'logo_mini' => '<img src="images/icone.png" width="50px">',*/
+    'logo' => '<b>No</b>Paper',
+    'logo_mini' => '<b>N</b>P',
 
     /*
     |--------------------------------------------------------------------------
@@ -109,35 +109,35 @@ return [
     */
 
     'menu' => [
-        'MENU',
-        [
+       
+      /* [
             'text'        => 'Home',
             'url'         => 'admin',
             'icon'        => 'home',
-        ],
-        'PRODUTOS',
+        ]*/
+        'PRODUTO',
         [
-            'text'        => 'Cadastro de Produto',
+            'text'        => 'Cadastro de Produtos',
             'url'         => 'admin/produtos',
             'icon'        => 'plus',
         ],
         [
             'text'        => 'Produtos Cadastrados',
             'url'         => 'admin/produtos/lista',
-            'icon'        => 'chevron-down',
+            'icon'        => 'list-ul',
         ],
-
+        'CATEGORIA',
         [
             'text'        => 'Cadastro de Categorias',
             'url'         => 'admin/categorias',
-            'icon'        => 'apple',
+            'icon'        => 'plus',
         ],
         [
             'text'        => 'Categorias Cadastradas',
             'url'         => 'admin/categorias/lista',
-            'icon'        => 'apple',
+            'icon'        => 'list-ul',
         ],
-
+        'RELATÓRIO',
      
     ],
 

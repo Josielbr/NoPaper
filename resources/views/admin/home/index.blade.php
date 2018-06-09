@@ -3,9 +3,10 @@
 @section('title', 'NoPaper | Admin')
 
 @section('content_header')
-    <a href="http://127.0.0.1:8000">Painel de Controle </a>
+<h1>Painel de Controle</h1>
 @stop
 
 @section('content')
     <p>Agora Você está Logado!</p>
+    <caixa titulo="Pizzas" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
 @stop

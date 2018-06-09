@@ -1,6 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'NoPaper | Admin')
+@section('title', 'NoPaper | Cadastro de Produto')
+
+@section('content_header')
+<h1>Cadastro de Produto</h1>
+@stop
 
 @section('content')
 <ul>
@@ -8,15 +12,11 @@
         <li>{{$error}}</li>
     @endforeach
 </ul>
-
-
-<h1>Cadastro de produtos</h1>
 <form action="produtos/adiciona" method="post">
     <input type="hidden" name="_token" value=" {{ csrf_token() }} " />
-
     <div class="form-group">
-        <Label>Nome</>
-        <input name="produto_nome" type="text" class="form-control" >
+        <Label>Nome</Label>
+        <input name="produto_nome" type="text" class="form-control">
         <Label>Valor</Label>
         <input name="produto_valor" type="teLabelxt" class="form-control">
         <Label>Quantidade</Label>
@@ -32,6 +32,7 @@
         <Label>Descrição</Label>
         <input name="produto_desc" type="text" class="form-control">
     </div>  
+
     <button class="btn btn-primary" type="submit">Salvar</button>  
     
     <button class="btn btn-danger" type="reset">Cancelar</button>  

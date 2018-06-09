@@ -1,10 +1,23 @@
-@extends('\layouts.layout_cabecalho')
+@extends('adminlte::page')
 
-@section('conteudo')
+@section('title', 'NoPaper | Categorias Cadastradas')
 
-<h1>Listagem de categorias cadastrados</h1> 
+@section('content_header')
+<h1>Categorias Cadastradas</h1> 
+@stop
+
+@section('content')
 <table class="table table-striped table-bordered table-hover">
-    @foreach ($categorias as $c)
+     <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Detalhes</th>
+        <th>Excluir</th>
+        </tr>      
+    </thead>
+    <tbody>
+     @foreach ($categorias as $c)
      <tr class = "" >
         <td>{{$c->categoria_nome}}</td>
         <td>{{$c->categoria_desc}}</td>
@@ -19,6 +32,7 @@
             </a>
         </td>
     </tr>
+    </tbody>
     @endforeach
 </table>
 @if(old('nome'))
@@ -26,5 +40,4 @@
     <strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado.
 </div>
 @endif
-
 @stop

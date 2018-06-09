@@ -133,10 +133,10 @@
          @endguest
         
         </topo>
-        
+       
           <!-- Logotipo do Cliente-->
         <logo-cliente></logo-cliente>
-        
+       
         @yield('content')
         <pagina tamanho="12">
                 <div class="row">

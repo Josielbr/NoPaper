@@ -1,18 +1,22 @@
-@extends('\layouts.layout_cabecalho')
+@extends('adminlte::page')
 
-@section('conteudo')
+@section('title', 'NoPaper | Produtos Cadastrados')
 
+@section('content_header')
+<h1>Detalhes do Produto: {{$p->produto_nome}}</h1> 
+<hr>
+@stop
 
-<h1>Detalhes do produto {{$p->produto_nome}}</h1> 
+@section('content')
     <ul>
         <li>
-            Valor {{$p->produto_valor}}
+            Valor: {{$p->produto_valor}}
         </li>
         <li>
-            Quantidade {{$p->produto_qtd}}
+            Quantidade: {{$p->produto_qtd}}
         </li>   
         <li>
-            Descrição {{$p->produto_desc or 'Não tem descrição'}}
+            Descrição: {{$p->produto_desc or 'Não tem descrição'}}
         </li>
     </ul>
 
