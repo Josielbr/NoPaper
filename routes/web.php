@@ -25,6 +25,15 @@ $this->get('/admin/categorias/remove/{id}', 'admin\CategoriaController@remove' )
 
 // Responsável por exibir o carrinho.
 Route::get('/carrinho', 'Carrinho\CarrinhoController@index')->name('carrinho.carrinho');
+Route::get('/carrinho/adicionar', function() {
+    return redirect()->route('carrinho');
+});
+Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar');
+Route::delete('/carrinho/remover', 'CarrinhoController@remover')->name('carrinho.remover');
+Route::post('/carrinho/concluir', 'CarrinhoController@concluir')->name('carrinho.concluir');
+Route::get('/carrinho/compras', 'CarrinhoController@compras')->name('carrinho.compras');
+Route::post('/carrinho/cancelar', 'CarrinhoController@cancelar')->name('carrinho.cancelar');
+Route::post('/carrinho/desconto', 'CarrinhoController@desconto')->name('carrinho.desconto');
 
 
 

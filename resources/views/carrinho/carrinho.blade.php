@@ -1,13 +1,13 @@
 
-@extends('layout_cabecalho')
+@extends('layouts.layout_cabecalho')
 @section('pagina_titulo', 'CARRINHO')
-@section('pagina_conteudo')
+@section('conteudo')
 
 <div class= "container">
     <div class ='row'>
-        <h3> Produtos do carrinho</h3>
+        <h3> Produtos na bandeja</h3>
      <hr/>
-        @forelse ($pedidos as $pedido_produto) 
+        @forelse ($pedidos as $Pedido) 
             <h5 class="col l6 s12 m6 ">Pedido: {{$Pedido->id}}</h5>
             <h5 class="col l6 s12 m6 ">Criado em: {{$Pedido->created_at->format('d/m/y H:i ')}}</h5>
             <table>
@@ -70,7 +70,8 @@
                 </div>
 
         @empty
-                <h5>Não há pedido no carrinho!</h5> 
+                <h5>Não há pedido na bandeja!</h5> 
+                <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg">Voltar</button>
          @endforelse   
      </div>
 </div>
