@@ -28,12 +28,12 @@ Route::get('/carrinho', 'Carrinho\CarrinhoController@index')->name('carrinho.car
 Route::get('/carrinho/adicionar', function() {
     return redirect()->route('carrinho');
 });
-Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('carrinho.adicionar');
-Route::delete('/carrinho/remover', 'CarrinhoController@remover')->name('carrinho.remover');
-Route::post('/carrinho/concluir', 'CarrinhoController@concluir')->name('carrinho.concluir');
-Route::get('/carrinho/compras', 'CarrinhoController@compras')->name('carrinho.compras');
-Route::post('/carrinho/cancelar', 'CarrinhoController@cancelar')->name('carrinho.cancelar');
-Route::post('/carrinho/desconto', 'CarrinhoController@desconto')->name('carrinho.desconto');
+Route::post('/carrinho/adicionar', 'Carrinho\CarrinhoController@adicionar')->name('carrinho.adicionar');
+Route::delete('/carrinho/remover', 'Carrinho\CarrinhoController@remover')->name('carrinho.remover');
+Route::post('/carrinho/concluir', 'Carrinho\CarrinhoController@concluir')->name('carrinho.concluir');
+Route::get('/carrinho/compras', 'Carrinho\CarrinhoController@compras')->name('carrinho.compras');
+Route::post('/carrinho/cancelar', 'Carrinho\CarrinhoController@cancelar')->name('carrinho.cancelar');
+Route::post('/carrinho/desconto', 'Carrinho\CarrinhoController@desconto')->name('carrinho.desconto');
 
 
 

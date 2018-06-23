@@ -62,9 +62,10 @@
                            <td>{{$p->produto_desc}}</td>
                             <td>{{$p->produto_qtd}}</td>
                             <td>
-                                    <a <form id="logout-form" action="{{ route('Carrinho.adicionar') }}" method="POST" style="display: none;">
-                                    </a>
-                                </td>
++                                    <a href="{{ route('carrinho.adicionar') }}">
++                                        <span>Comprar</span>
++                                    </a>
++                           </td>
                             <td>
                                 <a href="/admin/produtos/mostra/{{$p->id}}">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
