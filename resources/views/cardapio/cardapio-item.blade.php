@@ -62,6 +62,11 @@
                            <td>{{$p->produto_desc}}</td>
                             <td>{{$p->produto_qtd}}</td>
                             <td>
+                                    <a href="{{ route('carrinho.adicionar') }}">
+                                        <span>Comprar</span>
+                                    </a>
+                                </td>
+                            <td>
                                 <a href="/admin/produtos/mostra/{{$p->id}}">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                                 </a>
@@ -71,14 +76,25 @@
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </a>
                             </td>
+                           
                         </tr>
+                        <tr>
+                            
                         </tbody>
-                       @endforeach-
-                    </table>
-        </pagina>
-        <rodape></rodape>
-        <script src="{{ asset('js/app.js') }}"></script>
+                       @endforeach
        
+                    </table>
+      
+        </pagina>
+        <rodape>
+
+            
+        </rodape>
+        <script src="{{ asset('js/app.js') }}"></script>
+
+      
+        
      </body>
+     
 </html>
     

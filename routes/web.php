@@ -39,10 +39,11 @@ Route::post('/carrinho/desconto', 'CarrinhoController@desconto')->name('carrinho
 
 
 
-//Responsável por exibir a home do Cardápio
-$this->get('/', 'Cardapio\CardapioController@index')->name('cardapio');
-$this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('cardapio-item');
-//$this->get('/cardapio-item', 'cardapio\CardapioItemController@listaProd'); mudar para não conflitar
+//Responsável por exibir a home do Cardápio//
+//$this->get('/', 'Cardapio\CardapioController@index')->name('cardapio'); homw
+//$this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('cardapio-item');
+$this->get('/cardapio-item', 'cardapio\CardapioItemController@listaProd'); //mudar para não conflitar
+$this->get('/', 'Cardapio\CategoriaCardapioController@lista');
 
 
 Auth::routes();
