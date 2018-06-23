@@ -36,8 +36,8 @@ class CarrinhoController extends Controller
 
         $produto = Produto::find($idproduto);
         if( empty($produto->id) ) {
-            $req->session()->flash('mensagem-falha', 'Produto nÃ£o encontrado em nossa loja!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Produto não encontrado em nossa loja!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         $idusuario = Auth::id();
@@ -64,9 +64,9 @@ class CarrinhoController extends Controller
             'status'     => 'RE'
             ]);
 
-        $req->session()->flash('mensagem-sucesso', 'Produto adicionado ao carrinho com sucesso!');
+        $req->session()->flash('mensagem-sucesso', 'Produto adicionado a bandeja com sucesso!');
 
-        return redirect()->route('carrinho.index');
+        return redirect()->route('carrinho.carrinho');
 
     }
 
@@ -88,8 +88,8 @@ class CarrinhoController extends Controller
             ]);
 
         if( empty($idpedido) ) {
-            $req->session()->flash('mensagem-falha', 'Pedido nÃ£o encontrado!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Pedido não encontrado!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         $where_produto = [
@@ -99,8 +99,8 @@ class CarrinhoController extends Controller
 
         $produto = PedidoProduto::where($where_produto)->orderBy('id', 'desc')->first();
         if( empty($produto->id) ) {
-            $req->session()->flash('mensagem-falha', 'Produto nÃ£o encontrado no carrinho!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Produto não encontrado na bandeja!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         if( $remove_apenas_item ) {
@@ -118,9 +118,9 @@ class CarrinhoController extends Controller
                 ])->delete();
         }
 
-        $req->session()->flash('mensagem-sucesso', 'Produto removido do carrinho com sucesso!');
+        $req->session()->flash('mensagem-sucesso', 'Produto removido da bandeja com sucesso!');
 
-        return redirect()->route('carrinho.index');
+        return redirect()->route('carrinho.carrinho');
     }
 
     public function concluir()
@@ -138,16 +138,16 @@ class CarrinhoController extends Controller
             ])->exists();
 
         if( !$check_pedido ) {
-            $req->session()->flash('mensagem-falha', 'Pedido nÃ£o encontrado!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Pedido não encontrado!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         $check_produtos = PedidoProduto::where([
             'pedido_id' => $idpedido
             ])->exists();
         if(!$check_produtos) {
-            $req->session()->flash('mensagem-falha', 'Produtos do pedido nÃ£o encontrados!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Produtos do pedido não encontrados!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         PedidoProduto::where([
@@ -161,7 +161,7 @@ class CarrinhoController extends Controller
                 'status' => 'PA'
             ]);
 
-        $req->session()->flash('mensagem-sucesso', 'Compra concluÃ­da com sucesso!');
+        $req->session()->flash('mensagem-sucesso', 'Compra conclui­da com sucesso!');
 
         return redirect()->route('carrinho.compras');
     }
@@ -204,7 +204,7 @@ class CarrinhoController extends Controller
             ])->exists();
 
         if( !$check_pedido ) {
-            $req->session()->flash('mensagem-falha', 'Pedido nÃ£o encontrado para cancelamento!');
+            $req->session()->flash('mensagem-falha', 'Pedido não encontrado para cancelamento!');
             return redirect()->route('carrinho.compras');
         }
 
@@ -214,7 +214,7 @@ class CarrinhoController extends Controller
             ])->whereIn('id', $idspedido_prod)->exists();
 
         if( !$check_produtos ) {
-            $req->session()->flash('mensagem-falha', 'Produtos do pedido nÃ£o encontrados!');
+            $req->session()->flash('mensagem-falha', 'Produtos do pedido não encontrados!');
             return redirect()->route('carrinho.compras');
         }
 
@@ -257,8 +257,8 @@ class CarrinhoController extends Controller
         $idusuario = Auth::id();
 
         if( empty($cupom) ) {
-            $req->session()->flash('mensagem-falha', 'Cupom invÃ¡lido!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Cupom invalido!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         $cupom = CupomDesconto::where([
@@ -267,8 +267,8 @@ class CarrinhoController extends Controller
             ])->where('dthr_validade', '>', date('Y-m-d H:i:s'))->first();
 
         if( empty($cupom->id) ) {
-            $req->session()->flash('mensagem-falha', 'Cupom de desconto nÃ£o encontrado!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Cupom de desconto não encontrado!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         $check_pedido = Pedido::where([
@@ -278,8 +278,8 @@ class CarrinhoController extends Controller
             ])->exists();
 
         if( !$check_pedido ) {
-            $req->session()->flash('mensagem-falha', 'Pedido nÃ£o encontrado para validaÃ§Ã£o!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Pedido não encontrado para validação!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         $pedido_produtos = PedidoProduto::where([
@@ -288,8 +288,8 @@ class CarrinhoController extends Controller
             ])->get();
 
         if( empty($pedido_produtos) ) {
-            $req->session()->flash('mensagem-falha', 'Produtos do pedido nÃ£o encontrados!');
-            return redirect()->route('carrinho.index');
+            $req->session()->flash('mensagem-falha', 'Produtos do pedido não encontrados!');
+            return redirect()->route('carrinho.carrinho');
         }
 
         $aplicou_desconto = false;
@@ -342,7 +342,7 @@ class CarrinhoController extends Controller
         } else {
             $req->session()->flash('mensagem-falha', 'Cupom esgotado!');
         }
-        return redirect()->route('carrinho.index');
+        return redirect()->route('carrinho.carrinho');
 
     }
 
