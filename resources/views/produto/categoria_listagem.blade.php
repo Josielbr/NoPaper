@@ -7,20 +7,20 @@
 @stop
 
 @section('content')
-<table class="table table-striped table-bordered table-hover">
-     <thead>
+<table class="table table-bordered table-hover">
+     <thead class="thead">
         <tr>
         <th>Nome</th>
-        <th>Descrição</th>
+       <!-- <th>Descrição</th>-->
         <th>Detalhes</th>
         <th>Excluir</th>
         </tr>      
     </thead>
-    <tbody>
+    <tbody class="table-striped">
      @foreach ($categorias as $c)
      <tr class = "" >
         <td>{{$c->categoria_nome}}</td>
-        <td>{{$c->categoria_desc}}</td>
+       {{-- <td>{{$c->categoria_desc}}</td>--}}
         <td>
             <a href="/admin/categorias/mostra/{{$c->id}}">
                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -40,4 +40,9 @@
     <strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado.
 </div>
 @endif
+<style>
+   .thead{
+       background-color: #cccccc;
+   }
+    </style>
 @stop

@@ -3,20 +3,34 @@
 @section('title', 'NoPaper | Categorias Cadastradas')
 
 @section('content_header')
-<h1>Detalhes da Categoria</h1> 
-<hr>
-<h3>{{$c->categoria_nome}}</h3>
+<h1>Detalhes da Categoria
+       {{--<b>{{$c->categoria_nome}}</b>--}}
+</h1> 
 @stop
 
 @section('content')
-    <ul>
-        <li>
-            Nome {{$c->categoria_nome}}
-        </li>
-        <li>
-            Descrição {{$c->categoria_desc or 'Não tem descrição'}}
-        </li>
-    </ul>
-    <hr>
-
+<table class="table table-striped" >
+        <thead class="thead">
+        <tr>
+       <th>Nome</th>
+    </tr>     
+   </thead>
+   <tbody>
+        <tr>
+                <td>{{$c->categoria_nome}}</td>
+        </tr>
+    </tbody>
+</table>
+<table class="table table-striped" >
+    </thead>
+       <thead class="thead">
+       <th>Descrição</th>
+       </tr>      
+   </thead>
+   <tbody>
+        <tr>
+        <td>{{$c->categoria_desc or 'Não tem descrição'}}</td>
+        </tr>
+    </tbody>
+</table>
 @stop

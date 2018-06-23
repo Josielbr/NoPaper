@@ -8,13 +8,13 @@
 
 @section('content')
 
-<table class="table table-striped table-bordered table-hover">
-    <thead>
+<table class="table  table-bordered table-hover">
+    <thead class="thead">
         <tr>
         <th>Nome</th>
-        <th>Valor</th>
+        <!--<th>Valor</th>
         <th>Descrição</th>
-        <th>Estoque</th>
+        <!--<th>Estoque</th>-->
         <th>Detalhes</th>
         <th>Excluir</th>
         </tr> 
@@ -23,9 +23,9 @@
     @foreach ($produtos as $p)
      <tr class = "{{ $p->produto_qtd < 2 ? 'danger' : ''}}" >
         <td>{{$p->produto_nome}}</td>
-        <td>{{$p->produto_valor}}</td>
-        <td>{{$p->produto_desc}}</td>
-        <td>{{$p->produto_qtd}}</td>
+    {{--<td>{{$p->produto_valor}}</td>
+       <td>{{$p->produto_desc}}</td>
+        <td>{{$p->produto_qtd}}</td>--}}
         <td>
             <a href="/admin/produtos/mostra/{{$p->id}}">
                 <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -45,5 +45,9 @@
     <strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado.
 </div>
 @endif
-
+<style>
+        .thead{
+            background-color: #cccccc;
+        }
+         </style>
 @stop

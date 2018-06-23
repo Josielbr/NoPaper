@@ -41,6 +41,10 @@ class ProdutoController extends Controller{
         return redirect()->action('admin\ProdutoController@lista');
     }
   
+    public function listaProd(){      
+        $produtos = Produtos::all();
+         return view('cardapio-item/lista')->with('produtos', $produtos);
+         }
 
 }
 

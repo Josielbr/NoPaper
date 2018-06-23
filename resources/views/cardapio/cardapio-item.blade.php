@@ -43,7 +43,38 @@
         </topo>
         @yield('content')
         <pagina tamanho="12">
-        <tabela-produtos></tabela-produtos>
+                <table class="table table-striped table-bordered table-hover">
+                        <thead class="thead">
+                            <tr>
+                            <th>Nome</th>
+                            <!--<th>Valor</th>
+                            <th>Descrição</th>
+                            <!--<th>Estoque</th>-->
+                            <th>Detalhes</th>
+                            <th>Excluir</th>
+                            </tr> 
+                        </thead>        
+                        <tbody>
+                      @foreach ($produtos as $p)
+                         <tr class = "{{ $p->produto_qtd < 2 ? 'danger' : ''}}" >
+                            <td>{{$p->produto_nome}}</td>
+                        <td>{{$p->produto_valor}}</td>
+                           <td>{{$p->produto_desc}}</td>
+                            <td>{{$p->produto_qtd}}</td>
+                            <td>
+                                <a href="/admin/produtos/mostra/{{$p->id}}">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="/admin/produtos/remove/{{$p->id}}">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                       @endforeach-
+                    </table>
         </pagina>
         <rodape></rodape>
         <script src="{{ asset('js/app.js') }}"></script>
