@@ -11,32 +11,10 @@ class CardapioController extends Controller
     {
         return view('cardapio.home.index');
     }
-
-    public function lista(){      
-        $produtos = Produtos::all();
-         return view('produto/produto_listagem')->with('produtos', $produtos);
-         }
- 
-     public function mostra($id){
-         $produto = Produtos::find($id);
-         return view('produto/produto_detalhe')->with('p', $produto);
-     }
- 
-     public function novo(){
-         return view('produto/produto_form')->with('categorias', Categoria::all());
-     }
- 
-     public function adiciona( ProdutoRequest $request){
-         Produtos::create($request->all());
-        return redirect('/admin')->withInput();
-     }
-     
- 
-     public function remove($id){
-         $produto = Produtos::find($id);
-         $produto->delete();
-         return redirect()->action('admin\ProdutoController@lista');
-     }
-   
     
+    public function lista(){      
+        $categorias = Categoria::all();
+         return view('produto/categoria_listagem')->with('categorias', $categorias);
+         }
+
 }
