@@ -1382,7 +1382,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(79);
+module.exports = __webpack_require__(74);
 
 
 /***/ }),
@@ -1410,10 +1410,9 @@ Vue.component('example-component', __webpack_require__(41));
 Vue.component('topo', __webpack_require__(44));
 Vue.component('caixa', __webpack_require__(51));
 Vue.component('pagina', __webpack_require__(56));
-Vue.component('logo-cliente', __webpack_require__(59));
-Vue.component('rodape', __webpack_require__(64));
-Vue.component('tabela-produtos', __webpack_require__(69));
-Vue.component('painel', __webpack_require__(74));
+Vue.component('rodape', __webpack_require__(59));
+Vue.component('tabela-produtos', __webpack_require__(64));
+Vue.component('painel', __webpack_require__(69));
 
 var app = new Vue({
   el: '#app'
@@ -43919,7 +43918,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.bg-aqua{\r\n    background-color: #00c0ef !important;\n}\n.box {\r\n    border-radius: 2px;\r\n    position: relative;\r\n    display: block;\r\n    margin-bottom: 20px;\r\n    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);\r\n            box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n}\n.box:hover {\r\n    text-decoration: none;\n}\n.box>.inner {\r\n    color: #fff;\r\n    text-align: center;\r\n    padding-top: 45px;\r\n    padding-bottom: 45px;\r\n    margin-bottom: 30px;\r\n    -webkit-transition: all .3s;\r\n    transition: all .3s;\r\n    border: 5px solid transparent;\n}\n.box h3 {\r\n    z-index: 5;\n}\n.box h3 {\r\n    font-size: 38px;\r\n    font-weight: bold;\r\n    /*margin: 0 0 0 0px;*/\r\n    white-space: nowrap;\r\n    padding: 0;\n}\n.box .icon {\r\n    -webkit-transition: all .3s linear;\r\n    transition: all .3s linear;\r\n    position: absolute;\r\n    top: -10px;\r\n    right: 10px;\r\n    z-index: 0;\r\n    font-size: 60px;\r\n    color: rgba(0,0,0,0.15);\n}\n.box:hover .icon {\r\n    font-size: 70px;\n}\na {\r\n    color: #fff;\r\n    text-decoration: none;\n}\na:hover, a:focus {\r\n    color: #fff;\r\n    text-decoration: none;\n}\n.icon:hover i{\r\n    color:  #fff;\n}\n.row {\r\n    margin-top: 20px;\n}\r\n\r\n\r\n", ""]);
+exports.push([module.i, "\n.bg-aqua{\r\n    background-color: #00c0ef !important;\n}\n.col-md-4 {\r\n    border-radius: 2px;\r\n    position: relative;\r\n    display: block;\r\n    margin-bottom: 10px;\r\n    margin-right: 10px;\r\n    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);\r\n            box-shadow: 0 1px 1px rgba(0,0,0,0.1);\n}\n.col-md-4:hover {\r\n    text-decoration: none;\n}\n.col-md-4>.inner {\r\n    color: #fff;\r\n    text-align: center;\r\n    padding-top: 45px;\r\n    margin-bottom: 30px;\n}\n.col-md-4 h3 {\r\n    z-index: 5;\n}\n.col-md-4 h3 {\r\n    font-size: 38px;\r\n    font-weight: bold;\r\n    margin: 0 0 0 0px;\r\n    white-space: nowrap;\r\n    padding: 0;\n}\na {\r\n    color: #fff;\r\n    text-decoration: none;\n}\n.row {\r\n    margin-top: 20px;\n}\na.box-footer {\r\n    position: relative;\r\n    text-align: center;\r\n    padding: 10px 0;\r\n    color: #fff;\r\n    display: block;\r\n    z-index: 10;\r\n    font-size: 25px;\r\n    top:10px;\n}\na:hover, a:active, a:focus {\r\n    outline: none;\r\n    text-decoration: none;\n}\na.box-footer:hover {\r\n    -webkit-transition: all .2s linear;\r\n    -webkit-transition: all .1s linear;\r\n    transition: all .1s linear;\r\n    color: rgb(206, 18, 18);\r\n    background: rgba(0,0,0,0.15);\n}\n.fa{\r\n\r\n    margin-left: 5px;\n}\n@media (min-width: 992px) {\n.col-md-4 {\r\n        width: 32.45%;\n}\n}\r\n\r\n\r\n", ""]);
 
 // exports
 
@@ -43930,10 +43929,6 @@ exports.push([module.i, "\n.bg-aqua{\r\n    background-color: #00c0ef !important
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
 //
 //
 //
@@ -43963,15 +43958,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "box", style: _vm.defineCor }, [
-    _c("div", { staticClass: "inner" }, [
-      _c("a", { attrs: { href: _vm.url } }, [
-        _c("div", { staticClass: "icon" }, [_c("i", { class: _vm.icone })]),
+  return _c(
+    "div",
+    { staticClass: "col-md-4", style: _vm.defineCor, attrs: { href: _vm.url } },
+    [
+      _c("div", { staticClass: "inner" }, [
+        _c("h3", [_vm._v(_vm._s(_vm.titulo))]),
         _vm._v(" "),
-        _c("h3", [_vm._v(_vm._s(_vm.titulo))])
+        _c("a", { staticClass: "box-footer", attrs: { href: _vm.url } }, [
+          _vm._v("Abrir"),
+          _c("i", { staticClass: "fa fa-arrow-circle-right" })
+        ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -44121,7 +44121,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\LogoCliente.vue"
+Component.options.__file = "resources\\assets\\js\\components\\Rodape.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -44130,9 +44130,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5710f0a8", Component.options)
+    hotAPI.createRecord("data-v-1c4a19a6", Component.options)
   } else {
-    hotAPI.reload("data-v-5710f0a8", Component.options)
+    hotAPI.reload("data-v-1c4a19a6", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -44153,13 +44153,13 @@ var content = __webpack_require__(61);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("b5c18f4e", content, false, {});
+var update = __webpack_require__(3)("d4292832", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5710f0a8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./LogoCliente.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-5710f0a8\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./LogoCliente.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1c4a19a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Rodape.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1c4a19a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Rodape.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -44177,7 +44177,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.logo h1 {\r\n    color: #000;\r\n    font-size: 40px;\n}\n.logo span {\r\n    color: #999;\n}\n#logo {\n}\r\n", ""]);
+exports.push([module.i, "\nfooter.footer {\r\nborder-top: 1px solid #333;\r\n  bottom: 0;\r\n  left: 0;\r\n  height: 40px;\r\n  position: fixed;\r\n  width: 100%;\n}\n.copyright {\r\n    background: rgb(29, 29, 29);\r\n    color: #fff;\r\n    padding-bottom: 20px;\n}\n.copyright a {\r\n    color: #ff432e;\r\n    text-decoration: none;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -44202,166 +44202,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
 /* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container", attrs: { id: "logo" } }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-12" }, [
-          _c("a", { attrs: { href: "#" } }, [
-            _c("div", { staticClass: "logo text-center" }, [
-              _c("h1", [_vm._v("Logo Cliente Aqui")]),
-              _vm._v(" "),
-              _c("span", [_vm._v("Slogan Cliente")])
-            ])
-          ])
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-5710f0a8", module.exports)
-  }
-}
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(65)
-}
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(67)
-/* template */
-var __vue_template__ = __webpack_require__(68)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\Rodape.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1c4a19a6", Component.options)
-  } else {
-    hotAPI.reload("data-v-1c4a19a6", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(66);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(3)("d4292832", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1c4a19a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Rodape.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1c4a19a6\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Rodape.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\nfooter.footer {\r\nborder-top: 1px solid #333;\r\n  bottom: 0;\r\n  left: 0;\r\n  height: 40px;\r\n  position: fixed;\r\n  width: 100%;\n}\n.copyright {\r\n    background: rgb(29, 29, 29);\r\n    color: #fff;\r\n    padding-bottom: 20px;\n}\n.copyright a {\r\n    color: #ff432e;\r\n    text-decoration: none;\n}\r\n\r\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 67 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -44403,19 +44248,19 @@ if (false) {
 }
 
 /***/ }),
-/* 69 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(70)
+  __webpack_require__(65)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(72)
+var __vue_script__ = __webpack_require__(67)
 /* template */
-var __vue_template__ = __webpack_require__(73)
+var __vue_template__ = __webpack_require__(68)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -44454,13 +44299,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 70 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(71);
+var content = __webpack_require__(66);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -44480,7 +44325,7 @@ if(false) {
 }
 
 /***/ }),
-/* 71 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -44494,7 +44339,7 @@ exports.push([module.i, "\n#bandeja.btn-primary {\r\n    color: #fff;\r\n    bac
 
 
 /***/ }),
-/* 72 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44540,7 +44385,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
-/* 73 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -44631,19 +44476,19 @@ if (false) {
 }
 
 /***/ }),
-/* 74 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(75)
+  __webpack_require__(70)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(77)
+var __vue_script__ = __webpack_require__(72)
 /* template */
-var __vue_template__ = __webpack_require__(78)
+var __vue_template__ = __webpack_require__(73)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -44682,13 +44527,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 75 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(76);
+var content = __webpack_require__(71);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -44708,7 +44553,7 @@ if(false) {
 }
 
 /***/ }),
-/* 76 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -44722,7 +44567,7 @@ exports.push([module.i, "\n.blue {\n    border-color: #072aa8;\n}\n.blue > .pane
 
 
 /***/ }),
-/* 77 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44748,7 +44593,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 78 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -44772,10 +44617,10 @@ if (false) {
 }
 
 /***/ }),
-/* 79 */
+/* 74 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Missing binding E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\node-sass\\vendor\\win32-x64-59\\binding.node\nNode Sass could not find a binding for your current environment: Windows 64-bit with Node.js 9.x\n\nFound bindings for the following environments:\n  - Windows 64-bit with Node.js 6.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass --force` to build the binding for your current environment.\n    at module.exports (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\node-sass\\lib\\binding.js:15:13)\n    at Object.<anonymous> (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\node-sass\\lib\\index.js:14:35)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at Object.<anonymous> (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\sass-loader\\lib\\loader.js:3:14)\n    at Module._compile (module.js:649:30)\n    at Object.Module._extensions..js (module.js:660:10)\n    at Module.load (module.js:561:32)\n    at tryModuleLoad (module.js:501:12)\n    at Function.Module._load (module.js:493:3)\n    at Module.require (module.js:593:17)\n    at require (internal/module.js:11:18)\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:13:17)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at runLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:170:18\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:27:11)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:165:10)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:173:18\n    at loadLoader (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\loadLoader.js:36:3)\n    at iteratePitchingLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:169:2)\n    at runLoaders (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\loader-runner\\lib\\LoaderRunner.js:362:2)\n    at NormalModule.doBuild (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\NormalModule.js:182:3)\n    at NormalModule.build (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\NormalModule.js:275:15)\n    at Compilation.buildModule (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\Compilation.js:157:10)\n    at moduleFactory.create (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\Compilation.js:460:10)\n    at factory (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\NormalModuleFactory.js:243:5)\n    at applyPluginsAsyncWaterfall (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\NormalModuleFactory.js:94:13)\n    at E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\tapable\\lib\\Tapable.js:268:11\n    at NormalModuleFactory.params.normalModuleFactory.plugin (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\tapable\\lib\\Tapable.js:272:13)\n    at resolver (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\NormalModuleFactory.js:69:10)\n    at process.nextTick (E:\\ULBRA\\6 semestre\\Desenvolvimento de Sistemas\\Sistema\\NoPaper\\node_modules\\webpack\\lib\\NormalModuleFactory.js:196:7)\n    at process._tickCallback (internal/process/next_tick.js:112:11)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

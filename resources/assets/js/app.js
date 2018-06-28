@@ -20,7 +20,6 @@ window.Vue = require('vue');
  Vue.component('topo', require('./components/Topo.vue'));
  Vue.component('caixa', require('./components/Caixa.vue'));
  Vue.component('pagina', require('./components/Pagina.vue'));
- Vue.component('logo-cliente', require('./components/LogoCliente.vue'));
  Vue.component('rodape', require('./components/Rodape.vue'));
  Vue.component('tabela-produtos', require('./components/TabelaProdutos.vue'));
  Vue.component('painel', require('./components/Painel.vue'));
