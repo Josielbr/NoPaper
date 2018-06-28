@@ -47,10 +47,11 @@
                         <thead class="thead">
                             <tr>
                             <th>Nome</th>
-                            <!--<th>Valor</th>
+                            <th>Valor</th>
                             <th>Descrição</th>
-                            <!--<th>Estoque</th>-->
-                            <th>Detalhes</th>
+                            <th>Estoque</th>
+                            <th>Comprar</th>
+                           <!-- <th>Detalhes</th>-->
                             <th>Excluir</th>
                             </tr> 
                         </thead>        
@@ -62,10 +63,10 @@
                            <td>{{$p->produto_desc}}</td>
                             <td>{{$p->produto_qtd}}</td>
                             <td>
-+                                    <a href="{{ route('carrinho.adicionar') }}">
-+                                        <span>Comprar</span>
-+                                    </a>
-+                           </td>
+                                  <a href="{{ route('carrinho.adicionar',$p->id) }}"  data-tooltip="Inserir ao carrinho">
+                                       <span>Comprar</span>                                   
+                                     </a>
+                             </td>
                             <td>
                                 <a href="/admin/produtos/mostra/{{$p->id}}">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
