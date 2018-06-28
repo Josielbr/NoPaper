@@ -34,6 +34,10 @@ class ProdutoController extends Controller{
        return redirect('/admin')->withInput();
     }
     
+    public function listaProdCategoria($categoria_id){
+         $produto = DB::select("select * from produtos where  categoria_id ='$categoria_id'");
+         return view('cardapio/produto_listagem')->with('produtos', $produto); 
+    }   
 
     public function remove($id){
         $produto = Produtos::find($id);
@@ -44,7 +48,7 @@ class ProdutoController extends Controller{
     public function listaProd(){      
         $produtos = Produtos::all();
          return view('cardapio-item/lista')->with('produtos', $produtos);
-         }
+    }
 
 }
 

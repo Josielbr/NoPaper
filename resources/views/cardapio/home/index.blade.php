@@ -14,7 +14,7 @@
     <div id="app">
         <!-- Topo-->
         <topo logo="#" url="{{ url('/') }}">
-
+    
              <!-- Autenticação do Usuário -->
              @guest
              <li><a href="{{ route('login') }}">Login</a></li>
@@ -138,7 +138,25 @@
         <logo-cliente></logo-cliente>
        
         @yield('content')
-       
+        <pagina tamanho="12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <caixa titulo="Pizzas" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Lanches" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Pastéis" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                    </div>
+                    <div class="col-md-4">
+                        <caixa titulo="Salgados" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Porções" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Petiscos" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                    </div>
+                    <div class="col-md-4">
+                        <caixa titulo="Cervejas" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Sucos" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                        <caixa titulo="Refrigerantes" url="{{ route('cardapio-item') }}" cor="#c0c0c0" icone="fa fa-arrow-circle-right"></caixa>
+                    </div>
+                </div>
+        </pagina>
           <!--Rodapé da pagina-->
         <rodape></rodape>
     </div>

@@ -1,8 +1,8 @@
 // formulario de inserção no carrinho
 
-<form method="POST" action="{{ route(‘carrinho.adicionar’)}}">
+<form method=”POST” action=”{{ route(‘carrinho.adicionar’}}”>
 {{csrf_filed() }}
-<imput type="hidden" name="id" value="{{$idproduto->id}}">
-<button class="btn-large col 16 m6 s6 green accent-4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="O produto será adicionado a bandeja">
+<imput type=”hidden” name=”id” value=”{{$registro->id}}”>
+<button class=”btn-large col 16 m6 s6 green accent-4 tooltipped” data-position=”bottom” data-delay=”50” data-tooltip=”O produto será adicionado a bandeja”>
 Compar</buttom>
 </form>

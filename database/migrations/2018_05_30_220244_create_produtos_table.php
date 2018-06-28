@@ -13,8 +13,7 @@ class CreateProdutosTable extends Migration
 
         
             $table->increments('id');
-            
-            
+
             $table->string('produto_nome');
             $table->string('produto_desc');
             $table->integer('produto_valor');
