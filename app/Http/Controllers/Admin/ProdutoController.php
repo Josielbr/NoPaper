@@ -48,7 +48,7 @@ class ProdutoController extends Controller{
     public function listaProd(){      
         $produtos = Produtos::all();
          return view('cardapio-item/lista')->with('produtos', $produtos);
-    }
+         }
 
 }
 
