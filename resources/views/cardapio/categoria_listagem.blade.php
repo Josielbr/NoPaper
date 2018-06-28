@@ -1,4 +1,3 @@
-
 <h1>Categorias de Cardápios</h1> 
 
 <table class="table table-bordered table-hover">

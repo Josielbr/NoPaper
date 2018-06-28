@@ -10,12 +10,12 @@
         </tr> 
     </thead>        
     <tbody>
-    @foreach ($produtos as $p)
-     <tr class = "" >
-        <td>{{$p->produto_nome}}</td>
-        <td>{{$p->produto_valor}}</td>
-       <td>{{$p->produto_desc}}</td>
-    </tr>
-    </tbody>
-    @endforeach
+        @foreach ($produtos as $p)
+        <tr class = "" >
+            <td>{{$p->produto_nome}}</td>
+            <td>{{$p->produto_valor}}</td>
+        <td>{{$p->produto_desc}}</td>
+        </tr>
+        @endforeach
+     </tbody>
 </table>

@@ -44,7 +44,6 @@ Route::post('/carrinho/desconto', 'Carrinho\CarrinhoController@desconto')->name(
 //$this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('cardapio-item');
 $this->get('/cardapio-item', 'cardapio\CardapioItemController@listaProd'); //mudar para não conflitar
 $this->get('/', 'Cardapio\CategoriaCardapioController@lista');
-//$this->get('/admin/produtos/lista', 'admin\ProdutoController@lista');
 $this->get('/produtos/listaProdCategoria/{id}', 'admin\ProdutoController@listaProdCategoria');
 
 
