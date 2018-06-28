@@ -73,7 +73,7 @@
                 <form method="POST" action="{{ route('carrinho.concluir') }}">
                     {{ csrf_field() }}
                     <input type="hidden" name="pedido_id" value="{{ $pedido->id }}">
-                    <button type="submit" class="btn-large blue col offset-l1 offset-s1 offset-m1 l5 s5 m5 tooltipped" data-position="top" data-delay="50" data-tooltip="Adquirir os produtos concluindo a compra?">
+                    <button type="submit" class="btn btn-primary btn-lg" data-position="top" data-delay="50" data-tooltip="Adquirir os produtos concluindo a compra?">
                         Finalizar Pedido
                     </button>   
                 </form>
@@ -83,7 +83,7 @@
 
         @empty
                 <h5>Não há pedido na bandeja!</h5> 
-                <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg">Voltar</button>
+                <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg" data-tooltip="Voltar">Voltar</button>
          @endforelse   
      </div'
 </div>

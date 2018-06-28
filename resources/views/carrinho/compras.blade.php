@@ -85,7 +85,7 @@
         </div>
         <div class="row col s12 m12 l12">
             <div class="divider"></div>
-            <h4>Pedido cancelados</h4>
+           {{-- <h4>Pedidos cancelados</h4>--}}
             @forelse ($cancelados as $Pedido)
                 <h5 class="col l2 s12 m2"> Pedido: {{ $Pedido->id }} </h5>
                 <h5 class="col l5 s12 m5"> Criado em: {{ $Pedido->created_at->format('d/m/Y H:i') }} </h5>
