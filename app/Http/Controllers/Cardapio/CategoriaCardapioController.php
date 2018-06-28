@@ -20,8 +20,13 @@ class CategoriaCardapioController extends Controller
 
     public function lista(){      
         $categorias = Categoria::all();
-         return view('produto/categoria_listagem')->with('categorias', $categorias);
+         return view('cardapio/categoria_listagem')->with('categorias', $categorias);
          }
+     
+    /*public function mostraProdutoCategora(){      
+       $produtos = Produtos::all();
+        return view('produto/produto_listagem')->with('produtos', $produtos);
+        }
 
      public function mostra($id){
         $categorias = Categoria::find($id);
@@ -36,5 +41,6 @@ class CategoriaCardapioController extends Controller
         $categorias = Categoria::find($id);
         $categorias->delete();
         return redirect()->action('admin\CategoriaCardapioController@lista');
-    }
+    }*/
+
 }

@@ -33,7 +33,11 @@ class ProdutoController extends Controller{
         Produtos::create($request->all());
        return redirect('/admin')->withInput();
     }
-    
+
+    public function listaProdCategoria($categoria_id){
+         $produto = DB::select("select * from produtos where  categoria_id ='$categoria_id'");
+         return view('cardapio/produto_listagem')->with('produtos', $produto); 
+    }   
 
     public function remove($id){
         $produto = Produtos::find($id);
