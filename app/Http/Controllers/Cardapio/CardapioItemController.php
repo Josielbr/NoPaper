@@ -21,13 +21,14 @@ class CardapioItemController extends Controller
     {
         return view('cardapio.cardapio-item');
     }
+  
    
     public function listaProd(){      
         $produtos = Produtos::all();
          return view('Cardapio/cardapio-item')->with('produtos', $produtos);
          }
 
-    }
+}
     
 
    

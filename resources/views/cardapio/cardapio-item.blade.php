@@ -47,15 +47,17 @@
                         <thead class="thead">
                             <tr>
                             <th>Nome</th>
-                            <!--<th>Valor</th>
+                            <th>Valor</th>
                             <th>Descrição</th>
-<<<<<<< HEAD
                             <th>Estoque</th>
                             <th>Comprar</th>
-=======
+
                             <!--<th>Estoque</th>-->
->>>>>>> 47d3233dd064cc026f87e1143bd17bee796a7e86
+
                             <th>Detalhes</th>
+                            <th>Estoque</th>
+                            <th>Comprar</th>
+                           <!-- <th>Detalhes</th>-->
                             <th>Excluir</th>
                             </tr> 
                         </thead>        
@@ -67,10 +69,10 @@
                            <td>{{$p->produto_desc}}</td>
                             <td>{{$p->produto_qtd}}</td>
                             <td>
-                                   <a href="{{ route('carrinho.adicionar') }}">
-                                        <span>Comprar</span>
-                                    </a>
-                           </td>
+                                  <a href="{{ route('carrinho.adicionar',$p->id) }}"  data-tooltip="Inserir ao carrinho">
+                                       <span>Comprar</span>                                   
+                                     </a>
+                             </td>
                             <td>
                                 <a href="/admin/produtos/mostra/{{$p->id}}">
                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
