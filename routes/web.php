@@ -46,7 +46,6 @@ $this->get('/cardapio-item', 'cardapio\CardapioItemController@listaProd'); //mud
 $this->get('/', 'Cardapio\CategoriaCardapioController@lista');
 //$this->get('/admin/produtos/lista', 'admin\ProdutoController@lista');
 $this->get('/produtos/listaProdCategoria/{id}', 'admin\ProdutoController@listaProdCategoria');
-//$this->get('/admin/produtos/mostra/{id}', 'admin\ProdutoController@mostra');
 
 
 
