@@ -49,7 +49,12 @@
                             <th>Nome</th>
                             <!--<th>Valor</th>
                             <th>Descrição</th>
+<<<<<<< HEAD
+                            <th>Estoque</th>
+                            <th>Comprar</th>
+=======
                             <!--<th>Estoque</th>-->
+>>>>>>> 47d3233dd064cc026f87e1143bd17bee796a7e86
                             <th>Detalhes</th>
                             <th>Excluir</th>
                             </tr> 
@@ -84,7 +89,7 @@
                        @endforeach
        
                     </table>
-      
+                    <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg">Voltar</button>
         </pagina>
         <rodape>
 

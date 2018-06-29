@@ -64,6 +64,18 @@
                 </strong>
                 <span class="col l2 m2 s2 ">R$ {{$number_format($total_produto,2,',','.')}}</span>
                 </div>
+                <div class="row">
+
+                
+                <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg">Continuar Comprando</button>
+                <form method="POST" action="{{ route('carrinho.concluir') }}">
+                    {{ csrf_field() }}
+                    <input type="hidden" name="pedido_id" value="{{ $pedido->id }}">
+                    <button type="submit" class="btn btn-primary btn-lg" data-position="top" data-delay="50" data-tooltip="Adquirir os produtos concluindo a compra?">
+                        Finalizar Pedido
+                    </button>   
+                </form>
+
                 <div class="row>"
                 <a class="btn-large tooltipped col l4 s4 m4 offset-l8 offset-s8 offset-m8"
                 data-position="top" data-delay="50" data-tooltip="Voltar a página inicial para continuar comprando?" href="{{route('index')}}">Continuar comprando</a>
@@ -71,7 +83,7 @@
 
         @empty
                 <h5>Não há pedido na bandeja!</h5> 
-                <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg">Voltar</button>
+                <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg" data-tooltip="Voltar">Voltar</button>
          @endforelse   
      </div>
 </div>
