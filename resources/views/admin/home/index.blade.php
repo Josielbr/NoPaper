@@ -8,5 +8,4 @@
 
 @section('content')
     <p>Agora Você está Logado!</p>
-    
 @stop

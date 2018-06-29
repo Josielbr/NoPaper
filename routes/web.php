@@ -42,8 +42,8 @@ Route::post('/carrinho/desconto',   'Carrinho\CarrinhoController@desconto')->nam
 
 //Responsável por exibir a home do Cardápio//
 //$this->get('/', 'Cardapio\CardapioController@index')->name('cardapio'); homw
-//$this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('cardapio-item');
-Route::get('cardapio-item', 'cardapio\CardapioItemController@listaProd'); //mudar para não conflitar
+$this->get('/cardapio-item', 'Cardapio\CardapioItemController@index')->name('cardapio-item');
+//$this->get('/cardapio-item', 'cardapio\CardapioItemController@listaProd'); //mudar para não conflitar
 $this->get('/', 'Cardapio\CategoriaCardapioController@lista');
 //$this->get('/admin/produtos/lista', 'admin\ProdutoController@lista');
 $this->get('/produtos/listaProdCategoria/{id}', 'admin\ProdutoController@listaProdCategoria');
