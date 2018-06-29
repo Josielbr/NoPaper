@@ -137,7 +137,12 @@ return [
             'url'         => 'admin/categorias/lista',
             'icon'        => 'list-ul',
         ],
-        'RELATÓRIO',
+        'CARDAPIO',
+        [
+            'text'        => 'Home do Cardápio',
+            'url'         => 'http://127.0.0.1:8000',
+            'icon'        => 'home',
+        ],
      
     ],
 

@@ -8,3 +8,46 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+#principal {
+    padding-bottom: 30px;
+}
+.carousel-inner > .item > img, 
+.carousel-inner > .item > a > img {
+    width: 100%;
+}
+h1, .h1 {
+font-size: 36px;
+text-align: center;
+padding: 15px;
+color: rgb(0, 0, 0);
+
+}
+#add{
+ color: green;
+ font-size: 20px;
+}
+.thead{
+    background-color: #cccccc;
+}
+#bandeja01{
+    margin-left: 15px;
+}
+#bandeja02{
+    float: right;
+    margin-right: 15px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #F15A24;
+    border-color:#F15A24;
+}
+.btn-primary:hover {
+    color: rgb(0, 0, 0);
+    background-color: #f86a0b;
+    border-color: #f86a0b;
+}
+#Carrinho{
+    float: right;
+}

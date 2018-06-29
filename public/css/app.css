@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8348,5 +8348,56 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+#principal {
+  padding-bottom: 30px;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+  text-align: center;
+  padding: 15px;
+  color: black;
+}
+
+#add {
+  color: green;
+  font-size: 20px;
+}
+
+.thead {
+  background-color: #cccccc;
+}
+
+#bandeja01 {
+  margin-left: 15px;
+}
+
+#bandeja02 {
+  float: right;
+  margin-right: 15px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #F15A24;
+  border-color: #F15A24;
+}
+
+.btn-primary:hover {
+  color: black;
+  background-color: #f86a0b;
+  border-color: #f86a0b;
+}
+
+#Carrinho {
+  float: right;
 }
 

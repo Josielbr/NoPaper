@@ -5,6 +5,7 @@
 <div class="container">
     <div class="row">
         <h3>Meus Pedidos</h3>
+    <hr/>
         @if (Session::has('mensagem-sucesso'))
             <div class="card-panel green">{{ Session::get('mensagem-sucesso') }}</div>
         @endif
@@ -20,10 +21,10 @@
                 <form method="POST" action="{{ route('carrinho.cancelar') }}">
                     {{ csrf_field() }}
                     <input type="hidden" name="pedido_id" value="{{ $Pedido->id }}">
-                    <table>
-                        <thead>
+                    <table class="table table-bordered table-hover">
+                            <thead class="thead">
                             <tr>
-                                <th colspan="2"></th>
+                               <!-- <th colspan="2"></th>-->
                                 <th>Produto</th>
                                 <th>Valor</th>
                                 <th>Desconto</th>
@@ -61,14 +62,14 @@
                         @endforeach
                         </tbody>
                         <tfoot>
-                            <tr>
+                           <!-- <tr>
                                 <td colspan="3"></td>
+                                
+                            </tr>-->
+                            <tr>
+                               <!-- <td colspan="3"></td>-->
                                 <td><strong>Total do Pedido</strong></td>
                                 <td>R$ {{ number_format($total_pedido, 2, ',', '.') }}</td>
-                            </tr>
-                            <tr>
-                                
-                                <td colspan="3"></td>
                             </tr>
                         </tfoot>
                     </table>

@@ -79,9 +79,7 @@ a.box-footer:hover {
     -webkit-transition: all .2s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;
-    color: rgb(206, 18, 18);
-    background: rgba(0,0,0,0.15);
-
+    color:#F15A24;
 }
 .fa{
 
@@ -89,7 +87,8 @@ a.box-footer:hover {
 }
 @media (min-width: 992px) {
     .col-md-4 {
-        width: 32.45%;
+        width: 32.456%;
+      
     }
 }
 

@@ -3,9 +3,9 @@
 @section('title', 'NoPaper | Admin')
 
 @section('content_header')
-<h1>Painel de Controle</h1>
+<h1>Bem-Vindo!</h1>
 @stop
 
 @section('content')
-    <p>Agora Você está Logado!</p>
+    
 @stop

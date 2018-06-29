@@ -4,13 +4,13 @@
 
 <div class= "container">
     <div class ='row'>
-        <h3> Produtos na bandeja</h3>
+        <h3> Produtos na Bandeja</h3>
      <hr/>
         @forelse ($pedidos as $Pedido) 
-            <h5 class="col l6 s12 m6 ">Pedido: {{$Pedido->id}}</h5>
+           <h5 class="col l6 s12 m6 ">Pedido: {{$Pedido->id}}</h5>
             <h5 class="col l6 s12 m6 ">Criado em: {{$Pedido->created_at->format('d/m/y H:i ')}}</h5>
-            <table>
-             <thead>
+            <table class="table table-bordered table-hover">
+                    <thead class="thead">
                     <tr>
                         <th>Produto</th>
                         <th>QTD</th>
@@ -68,11 +68,11 @@
                 <div class="row">
 
                 
-                <button id="bandeja" onClick="history.go(-1)" class="btn btn-primary btn-lg">Continuar Comprando</button>
+                <button id="bandeja02" onClick="history.go(-1)" class="btn btn-primary btn-lg">Continuar Comprando</button>
                 <form method="POST" action="{{ route('carrinho.concluir') }}">
                     {{ csrf_field() }}
                     <input type="hidden" name="pedido_id" value="{{ $pedido->id }}">
-                    <button type="submit" class="btn-large blue col offset-l1 offset-s1 offset-m1 l5 s5 m5 tooltipped" data-position="top" data-delay="50" data-tooltip="Adquirir os produtos concluindo a compra?">
+                    <button id="bandeja01" type="submit" class="btn btn-primary btn-lg" data-position="top" data-delay="50" data-tooltip="Adquirir os produtos concluindo a compra?">
                         Finalizar Pedido
                     </button>   
                 </form>

@@ -19,21 +19,21 @@
 </script>
 <style type="text/css">
 footer.footer {
-border-top: 1px solid #333;
-  bottom: 0;
+border: 1px solid transparent;
+  bottom: 10px;
   left: 0;
-  height: 40px;
+  height: 45px;
   position: fixed;
   width: 100%;
 }
 
 .copyright {
-    background: rgb(29, 29, 29);
-    color: #fff;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding-bottom: 20px;
 }
 .copyright a {
-    color: #ff432e;
+    color: #F15A24;
     text-decoration: none;
 }
 

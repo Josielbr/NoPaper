@@ -17,4 +17,5 @@ class CardapioController extends Controller
          return view('produto/categoria_listagem')->with('categorias', $categorias);
          }
 
+
 }

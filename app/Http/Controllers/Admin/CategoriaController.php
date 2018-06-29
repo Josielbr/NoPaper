@@ -44,5 +44,6 @@ class CategoriaController extends Controller
         $categorias = Categoria::find($id);
         $categorias->delete();
         return redirect()->action('admin\CategoriaController@lista');
-    }
+    }    
+
 }
